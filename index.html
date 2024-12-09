@@ -12,23 +12,23 @@
         <div class="first-slide">
           <h2>Create an Account</h2>
           <button class="method-btn" onclick="signinWithGoogle()">
-            <i class="fab fa-google"></i> Sign up with Google
+            <i class="fab fa-google"></i> Sign in with Google
           </button>
           <button class="method-btn" onclick="signinWithFacebook()">
-            <i class="fab fa-facebook-f"></i> Sign up with Facebook
+            <i class="fab fa-facebook-f"></i> Sign in with Facebook
           </button>
           <button class="method-btn" onclick="signinWithEmail()">
-            <i class="fas fa-envelope"></i> Sign up with Gmail
+            <i class="fas fa-envelope"></i> Sign in with Gmail
           </button>
         </div>
         <div class="second-slide">
           <h2>Create Your Profile</h2>
           <div class="input-container">
-            <input type="text" placeholder="Username" class="input-field">
+            <input type="text" placeholder="Username" class="input-field" id="username-field">
             <i class="fas fa-user icon"></i>
           </div>
           <div class="input-container">
-            <input type="email" placeholder="Email" class="input-field">
+            <input type="email" placeholder="Email" class="input-field" id="email-field">
             <i class="fas fa-envelope icon"></i>
           </div>
           <div class="input-container">
@@ -36,7 +36,7 @@
             <i class="fas fa-lock icon" id="password-icon" onclick="togglePasswordVisibility()"></i>
           </div>
           
-          <button class="submit-btn" type="submit">SIGN UP</button>
+          <button class="submit-btn" type="submit" onclick="handleSignUp()">SIGN UP</button>
         </div>
         </div>
   <script src="script.js"></script>
