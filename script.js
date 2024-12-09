@@ -1,31 +1,43 @@
-function handleSignUp() {
-  event.preventDefault(); 
+document.getElementById('signup-form').addEventListener('submit', handleSignUp);
 
-  const emailField = document.getElementById('email-field');
-  const passwordField = document.getElementById('password-field');
-  const nameField = document.getElementById('username-field');
+function handleSignUp(event) {
+    event.preventDefault(); 
 
-  if (!emailField.value || !passwordField.value || !nameField.value) {
-      alert("Please fill all the required fields before proceeding.");
-      return; 
-  }
+    const emailField = document.getElementById('email-field');
+    const passwordField = document.getElementById('password-field');
+    const nameField = document.getElementById('username-field');
 
-  alert("Sign-up successful! Welcome " + nameField.value);
+    if (nameField.value.includes(' ') || passwordField.value.includes(' ')) {
+        alert("Username and password should not contain spaces.");
+        return; 
+    }
 
-  document.getElementById('signup-form').reset();
+    if (passwordField.value.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+    }
+
+    if (!emailField.value || !passwordField.value || !nameField.value) {
+        alert("Please fill all the required fields before proceeding.");
+        return; 
+    }
+
+    alert("Sign-up successful! Welcome " + nameField.value);
+
+    document.getElementById('signup-form').reset();
 }
 
 function togglePasswordVisibility() {
-  const passwordField = document.getElementById('password-field');
-  const passwordIcon = document.getElementById('password-icon');
+    const passwordField = document.getElementById('password-field');
+    const passwordIcon = document.getElementById('password-icon');
 
-  if (passwordField.type === 'password') {
-      passwordField.type = 'text';
-      passwordIcon.classList.remove('fa-lock');
-      passwordIcon.classList.add('fa-unlock'); 
-  } else {
-      passwordField.type = 'password';
-      passwordIcon.classList.remove('fa-unlock');  
-      passwordIcon.classList.add('fa-lock'); 
-  }
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        passwordIcon.classList.remove('fa-lock');
+        passwordIcon.classList.add('fa-unlock');
+    } else {
+        passwordField.type = 'password';
+        passwordIcon.classList.remove('fa-unlock');
+        passwordIcon.classList.add('fa-lock');
+    }
 }

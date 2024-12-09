@@ -21,22 +21,22 @@
             <i class="fas fa-envelope"></i> Sign in with Gmail
           </button>
         </div>
-        <div class="second-slide">
+        <form id="signup-form" class="second-slide">
           <h2>Create Your Profile</h2>
           <div class="input-container">
-            <input type="text" placeholder="Username" class="input-field" id="username-field">
+            <input type="text" placeholder="Username" class="input-field" id="username-field" required>
             <i class="fas fa-user icon"></i>
           </div>
           <div class="input-container">
-            <input type="email" placeholder="Email" class="input-field" id="email-field">
+            <input type="email" placeholder="Email" class="input-field" id="email-field" required>
             <i class="fas fa-envelope icon"></i>
           </div>
           <div class="input-container">
-            <input type="password" id="password-field" placeholder="Password" class="input-field">
+            <input type="password" id="password-field" placeholder="Password" class="input-field" required>
             <i class="fas fa-lock icon" id="password-icon" onclick="togglePasswordVisibility()"></i>
           </div>
           
-          <button class="submit-btn" type="submit" onclick="handleSignUp()">SIGN UP</button>
+          <button class="submit-btn" type="submit">SIGN UP</button>
         </div>
         </div>
   <script src="script.js"></script>
