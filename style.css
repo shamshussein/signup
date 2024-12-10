@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(to bottom, #3a7f9d, #2f768e, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,26 +15,26 @@ body, html {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     width: 50%;
-    /* max-width: 800px; */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 60px;
-    position: relative;
-    z-index: 3;
     display: flex;
-    justify-content: space-between;
-    /* gap: 10px; */
   }
     
   .first-slide , .second-slide{
     width: 45%;
-    padding: 20px;
+    padding: 30px 40px 30px 40px;
     background: #f9f9f9;
-    /* border-radius: 10px; */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
   }
   
   .first-slide{
-    background: linear-gradient(135deg, #ffcc70 ,orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(to bottom, #ffcc70 ,orange, #ffcc70);
+  }
+  .second-slide{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   h2 {
@@ -64,7 +64,7 @@ body, html {
     padding: 15px;
     border: 1px;
     border-radius: 5px;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(to bottom, rgb(117, 107, 88), rgb(60, 52, 35), rgb(50, 38, 17));
     color: white;
     transition: background-color 0.3s;
     width: 100%;
@@ -77,17 +77,17 @@ body, html {
   }
   
   .method-btn:hover {
-    background: linear-gradient(to bottom, #496f80, #04232e, #61b1d4);
+    background: linear-gradient(to bottom, rgb(117, 107, 88), rgb(60, 52, 35), rgb(241, 167, 30));
   }
   
   .submit-btn {
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    background: rgb(72, 176, 72);
     color: white;
     width: 100%;
   }
   
   .submit-btn:hover {
-    background: linear-gradient(to bottom, #496f80, #04232e, #61b1d4);
+    background: green;
   }
   .input-container {
     display: flex;
